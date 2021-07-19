@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="songItem"
+            type="com.carlosblaya.theagilemonkeystest.domain.model.Song" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivAlbum"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:rotation="90"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/triangle_vector_corner"></ImageView>
+
+            <ImageView
+                android:id="@+id/ivVideo"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:visibility="gone"
+                android:background="@color/black75"
+                android:layout_alignParentTop="true"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/outline_movie_24"
+                app:tint="@color/white"></ImageView>
+
+            <LinearLayout
+                android:id="@+id/ll_like"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/iv_favourite"
+                    android:src="@drawable/outline_favorite_border_24"
+                    app:tint="@color/white"></ImageView>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name_song"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black75"
+                android:fontFamily="@font/monts_bold"
+                android:padding="10dp"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"></androidx.appcompat.widget.AppCompatTextView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

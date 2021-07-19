@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TheAgileMonkeysTest</string>
+    <string name="search">Search</string>
+    <string name="likes">Likes</string>
+    <string name="artists_or_musical_groups">Artists or musical groups</string>
+    <string name="no_results">No results</string>
+    <string name="release_date">"Release date: "</string>
+</resources>

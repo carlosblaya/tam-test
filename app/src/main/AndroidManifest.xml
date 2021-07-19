@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.carlosblaya.theagilemonkeystest">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".TAMApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".ui.video.VideoActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"></activity>
+
+        <service
+            android:name=".util.streaming.PlayerService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".ui.main.MainActivity$LaunchPlayerBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.carlosblaya.theagilemonkeystest.ui.MainActivity" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

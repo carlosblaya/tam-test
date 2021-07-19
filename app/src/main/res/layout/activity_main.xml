@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_below="@id/headbar"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_player"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:background="@color/black75"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/equaliser"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:lottie_rawRes="@raw/spinning_equalizer"
+            app:lottie_autoPlay="true"
+            android:layout_marginLeft="15dp"
+            app:lottie_loop="true"
+            android:layout_gravity="center_vertical"/>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:id="@+id/iv_album"
+            android:scaleType="centerInside"
+            android:layout_gravity="center_vertical"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1px"
+            app:civ_shadow="true"
+            app:civ_shadow_color="#ffffffff"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name_artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/monts_semibold"
+                android:text=""
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12"></androidx.appcompat.widget.AppCompatTextView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name_song"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/monts_bold"
+                android:text=""
+                android:ellipsize="marquee"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15"></androidx.appcompat.widget.AppCompatTextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_like"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="15dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/iv_favourite"
+                android:src="@drawable/outline_favorite_border_24"
+                android:scaleType="center"
+                app:tint="@color/white"></ImageView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/headbar_main" android:id="@+id/headbar"></include>
+
+
+</RelativeLayout>
+
+
