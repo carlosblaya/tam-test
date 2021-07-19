@@ -5,6 +5,23 @@ Hope you like it :)
 </p>
 </br>
 
+## Tech stack
+- Kotlin based
+- Coroutines for asynchronous.
+- Koin for dependency injection
+- Android Jetpack
+  - Lifecycle
+  - ViewModel
+  - ViewBinding
+  - Paging 3 - for paging search artists
+  - Palette
+- ExoPlayer 
+- Architecture
+  - MVVM Architecture (View - DataBinding - ViewModel - Model)
+  - Repository pattern
+- Retrofit2 & OkHttp3
+<br>
+
 ## MAD Score
 <img src="/previews/summary.PNG"/>
 <img src="/previews/jetpack.PNG"/>
