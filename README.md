@@ -15,11 +15,13 @@ Hope you like it :)
   - ViewBinding
   - Paging 3 - for paging search artists
   - Palette
+  - Room
 - ExoPlayer 
 - Architecture
   - MVVM Architecture (View - DataBinding - ViewModel - Model)
   - Repository pattern
 - Retrofit2 & OkHttp3
+- Material Components
 <br>
 
 ## MAD Score
