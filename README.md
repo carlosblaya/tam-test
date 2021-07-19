@@ -6,5 +6,5 @@ Hope you like it :)
 </br>
 
 ## MAD Score
-<img src="/previews/summary.png"/>
-<img src="/previews/jetpack.png"/>
+<img src="/previews/summary.PNG"/>
+<img src="/previews/jetpack.PNG"/>
